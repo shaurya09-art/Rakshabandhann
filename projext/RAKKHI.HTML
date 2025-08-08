@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Raksha Bandhan</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #fff8dc;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #d2691e;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+        img {
+            margin-top: 20px;
+            max-width: 400px;
+            width: 90%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💖 Happy Raksha Bandhan 💖</h1>
+    <p>Wishing you a bond of love, protection, and happiness forever!</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Rakhi_on_hand.jpg" alt="Raksha Bandhan">
+
+    <!-- Background Music -->
+    <audio id="bg-music" autoplay loop muted>
+        <source src="G:\for-my-sis.vercel.app\music\bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                let volume = 0;
+                music.muted = false;
+                music.volume = volume;
+
+                const fade = setInterval(() => {
+                    if (volume < 1) {
+                        volume += 0.05;
+                        music.volume = volume;
+                    } else {
+                        clearInterval(fade);
+                    }
+                }, 100);
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>
